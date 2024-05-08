@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="390651b5-d050-47b4-b2db-0383f637a6b8" name="Changes" comment="Modified UDPServer">
-      <change beforePath="$PROJECT_DIR$/src/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UDPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TCPServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715180960295</updated>
-      <workItem from="1715180961138" duration="6128000" />
+      <workItem from="1715180961138" duration="8620000" />
     </task>
     <task id="LOCAL-00001" summary="Initialised Git, created UDP client and server classes">
       <option name="closed" value="true" />
