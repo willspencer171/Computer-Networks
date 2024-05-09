@@ -12,11 +12,19 @@ public class TCPServer {
 
         DataInputStream dataIn = new DataInputStream(clientSocket.getInputStream());
         DataOutputStream dataOut = new DataOutputStream(clientSocket.getOutputStream());
+        BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
 
-        String clientMessage = dataIn.readUTF();
-        System.out.println(clientMessage);
-        String serverMessage = "Hi this is coming from Server!";
-        dataOut.writeUTF(serverMessage);
+        while (true) {
+            String clientMessage = dataIn.readUTF();
+            if (clientMessage.isBlank()) {
+                dataOut.writeUTF("You have terminated this connection. Goodbye!");
+                break;
+            }
+            System.out.println(clientMessage);
+            String serverMessage = userInput.readLine();
+            dataOut.writeUTF(serverMessage);
+        }
+
 
         dataIn.close();
         dataOut.close();
