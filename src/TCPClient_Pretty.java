@@ -5,6 +5,16 @@ public class TCPClient_Pretty {
     private PrintWriter output;
     private BufferedReader input;
 
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter IP Address");
+        String ipAddress = reader.readLine();
+        TCPClient_Pretty client = new TCPClient_Pretty();
+        client.startConnection(ipAddress, 5555);
+        System.out.println(client.sendUserMessage());
+
+    }
+
     public void startConnection(String ipAddress, int port) throws IOException {
         clientSocket = new Socket(ipAddress, port);
         output = new PrintWriter(clientSocket.getOutputStream(), true);

@@ -4,7 +4,7 @@ public class TCPClient {
     public static void main(String[] args) throws IOException {
         try (Socket socket = new Socket()) {
             // Try to connect to TCP Server at port 5001
-            socket.connect(new InetSocketAddress("127.0.0.1", 5001), 10000);
+            socket.connect(new InetSocketAddress("127.0.0.1", 5555), 10000);
             System.out.println("Connection Successful!");
 
             BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
